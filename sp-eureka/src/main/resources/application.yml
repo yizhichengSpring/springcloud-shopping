@@ -8,7 +8,9 @@ eureka:
   instance:
     hostname: 127.0.0.1
   client:
+    # 是否获取别的eureka-server 上的信息 因为我们是单节点 所以不需要
     fetch-registry: false
+    # 是否将自己注册到eureka上？ 是不需要的
     register-with-eureka: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
