@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>sp-user</module>
+        <module>sp-goods</module>
     </modules>
 
 
