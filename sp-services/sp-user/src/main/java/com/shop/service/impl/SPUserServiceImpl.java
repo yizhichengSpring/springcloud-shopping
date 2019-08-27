@@ -38,7 +38,7 @@ public class SPUserServiceImpl implements SPUserService {
 
     @Override
     public String getOne(Long id) {
-        SPUser user = userDao.getOne(id);
+        SPUser user = userDao.getAllById(id);
         return JSON.toJSONString(user);
     }
 

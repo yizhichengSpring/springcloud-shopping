@@ -3,11 +3,9 @@ package com.shop.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * @author yi
@@ -20,6 +18,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 @Table(name = "sp_user")
 public class SPUser {
 
@@ -28,18 +27,21 @@ public class SPUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Basic
+    @Column(name = "name", nullable = false)
     private String name;
 
+    @Basic
+    @Column(name = "mobile", nullable = false)
     private String mobile;
 
+    @Basic
+    @Column(name = "email", nullable = false)
     private String email;
 
-    private String address;
-
     @Basic
-    @Column(name = "del_flag", nullable = false)
-    private Long delFlag;
-
+    @Column(name = "address", nullable = false)
+    private String address;
 
 
 

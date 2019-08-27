@@ -10,7 +10,6 @@
     <modules>
         <module>sp-eureka</module>
         <module>sp-getway</module>
-        <module>sp-commons</module>
         <module>sp-services</module>
     </modules>
     <packaging>pom</packaging>

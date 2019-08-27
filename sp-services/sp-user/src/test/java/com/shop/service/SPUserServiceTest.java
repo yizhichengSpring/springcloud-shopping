@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.transaction.Transactional;
+
 /**
  * @author yi
  * @ClassName SPUserServiceTest
@@ -22,6 +24,7 @@ public class SPUserServiceTest {
     private SPUserService userService;
 
 
+    @Transactional
     @Test
     public void addUser() {
         SPUserDTO spUserDTO = new SPUserDTO("易志成","13141016707","13141016707@163.com","北京");
