@@ -43,7 +43,8 @@ public class SPGoodsServiceImpl implements SPGoodsService {
 
     @Override
     public void updGoods(SPGoodsDTO goodsDTO) {
-        SPGoods goods = new SPGoods();
+        Optional<SPGoods> spGoods =spGoodsDao.findById(goodsDTO.getId());
+        SPGoods goods = spGoods.get();
         BeanUtils.copyProperties(goodsDTO,goods);
         spGoodsDao.save(goods);
     }

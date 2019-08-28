@@ -54,4 +54,19 @@ public class GoodsServiceTest {
         SPGoods goods = goodsService.getById(6L);
         log.info(JSON.toJSONString(goods));
     }
+
+
+    @Test
+    public void updGoods() {
+        SPGoodsDTO goods = new SPGoodsDTO();
+        goods.setCategory("电器");
+        goods.setGoodsName("iphonex");
+        goods.setGoodsPrixe(new BigDecimal(1000));
+        goods.setGoodsRemark("123");
+        goods.setGoodsThumb("htpps://www.aiqiyi.com");
+        goods.setId(6L);
+        goods.setStatus(1);
+        goods.setDelFlag(0);
+        goodsService.updGoods(goods);
+    }
 }
