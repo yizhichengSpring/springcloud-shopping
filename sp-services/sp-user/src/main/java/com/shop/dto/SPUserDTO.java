@@ -12,6 +12,8 @@ import lombok.NoArgsConstructor;
  **/
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+
 public class SPUserDTO {
 
     private String name;
@@ -21,11 +23,4 @@ public class SPUserDTO {
     private Integer delFlag;
 
 
-    public SPUserDTO(String name, String mobile, String email, String address) {
-        this.name = name;
-        this.mobile = mobile;
-        this.email = email;
-        this.address = address;
-        this.delFlag = 0;
-    }
 }
