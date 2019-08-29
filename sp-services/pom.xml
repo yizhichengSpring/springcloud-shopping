@@ -13,7 +13,17 @@
     <modules>
         <module>sp-user</module>
         <module>sp-goods</module>
+        <module>sp-shopping-cart</module>
     </modules>
 
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+    </dependencies>
 
 </project>
