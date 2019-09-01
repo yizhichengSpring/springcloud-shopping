@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.shop.dto.SPUserDTO;
 import com.shop.entity.SPUser;
 import com.shop.service.SPUserService;
+import com.shop.vo.SPShoppingCartVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,5 +45,11 @@ public class SPUserController {
     public int upd(SPUserDTO userDTO) {
         userService.updUser(userDTO);
         return 1;
+    }
+
+    @RequestMapping("/getUserShppingCart/{userId}")
+    public String getUserShppingCart(@PathVariable("userId") Long userId) {
+       String str =  userService.getUserShoppingCart(userId);
+       return JSON.toJSONString(str);
     }
 }

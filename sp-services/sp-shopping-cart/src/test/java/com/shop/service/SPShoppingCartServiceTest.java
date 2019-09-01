@@ -59,4 +59,10 @@ public class SPShoppingCartServiceTest {
         spShoppingCartDTO.setDelFlag(0);
         spShoppingCartService.upd(spShoppingCartDTO);
     }
+
+    @Test
+    public void shoppingCartByUserId() {
+        List<SPShoppingCart> spShoppingCarts = spShoppingCartService.getAllByUserId(33L);
+        log.info(JSON.toJSONString(spShoppingCarts));
+    }
 }

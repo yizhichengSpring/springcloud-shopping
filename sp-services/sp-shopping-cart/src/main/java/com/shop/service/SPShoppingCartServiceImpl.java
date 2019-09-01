@@ -56,4 +56,11 @@ public class SPShoppingCartServiceImpl implements SPShoppingCartService {
         spShoppingCart.setDelFlag(1);
         spShoppingCartDao.save(spShoppingCart);
     }
+
+
+    @Override
+    public List<SPShoppingCart> getAllByUserId(Long userId) {
+        List<SPShoppingCart> spShoppingCarts = spShoppingCartDao.findAllByUserId(userId);
+        return spShoppingCarts;
+    }
 }

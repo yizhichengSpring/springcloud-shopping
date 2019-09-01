@@ -6,7 +6,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: sp-eureka-client-shopping-cart
+    name: sp-eureka-client-cart
   jpa:
     show-sql: true
     hibernate:

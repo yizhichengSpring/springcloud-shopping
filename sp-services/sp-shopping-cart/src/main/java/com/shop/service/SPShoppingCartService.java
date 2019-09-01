@@ -17,6 +17,7 @@ public interface SPShoppingCartService {
 
     void upd(SPShoppingCartDTO spShoppingCartDTO);
 
-
     void del(Long id);
+
+    List<SPShoppingCart> getAllByUserId(Long userId);
 }
