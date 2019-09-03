@@ -7,3 +7,19 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka/
+
+zuul:
+  prefix: /shop
+  routes:
+    goods:
+      path: /sp-goods/**
+      serviceId: sp-eureka-client-goods
+      strip-prefix: false
+    shoppingcart:
+      path: /sp-shopping-cart/**
+      serviceId: sp-eureka-client-cart
+      strip-prefix: false
+    user:
+      path: /sp-user/**
+      serviceId: sp-eureka-client-user
+      strip-prefix: false
