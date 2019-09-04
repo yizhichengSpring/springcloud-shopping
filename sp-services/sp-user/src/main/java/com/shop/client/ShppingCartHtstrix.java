@@ -1,10 +1,6 @@
 package com.shop.client;
 
-import com.shop.vo.SPShoppingCartVO;
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author yi

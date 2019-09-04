@@ -1,9 +1,11 @@
 spring:
   application:
+    # 服务名
     name: sp-eureka
+# 服务对应端口
 server:
   port: 8000
-
+# eureka 默认地址
 eureka:
   instance:
     hostname: 127.0.0.1
@@ -13,4 +15,5 @@ eureka:
     # 是否将自己注册到eureka上？ 是不需要的
     register-with-eureka: false
     service-url:
+      # eureka 默认注册地址
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
